@@ -57,6 +57,12 @@
     .title_left {
         font-size: 30px;
     }
+
+    .carousel {
+        &__inner {
+            width: 80%;
+        }
+    }
 }
 	
 
