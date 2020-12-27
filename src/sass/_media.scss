@@ -1,0 +1,134 @@
+@media (max-width: 1200px) {
+
+}
+	
+
+@media (max-width: 991px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        &__logo {
+            width: 200px;
+        }
+        &__phone {
+            font-size: 15px;
+        }
+    }
+
+    .advantages {
+        &__item {
+            max-width: 200px;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+	
+
+@media (max-width: 768px) {
+    .header {
+        &__logo {
+            width: 150px;
+        }
+        &__phone {
+            font-size: 15px;
+        }
+    }
+
+    .advantages {
+        &__wrapper {
+            justify-content: space-around;
+        }
+        &__item {
+            max-width: 150px;
+            a {
+                display: block;
+            }
+        }
+        &__subtitle {
+            min-height: 55px;
+            line-height: 25px;
+        }
+    }
+}
+	
+
+@media (max-width: 576px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        &__logo {
+            width: 90%;
+        }
+        &__official {
+            display: none;
+        }
+        &__contacts {
+            align-items: center;
+            .button {
+                margin-top: 10px;
+            }
+        }
+        &__phone {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+        &__header {
+            font-size: 30px;
+            line-height: 35px;
+            text-align: center;
+        }
+        &__subheader {
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+        }
+        &__icons {
+            margin-top: 20px;
+            width: auto;
+            flex-direction: column;
+        }
+        &__icon {
+            margin-top: 25px;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .advantages {
+        padding: 40px 0;
+        &__wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        &__item {
+            max-width: 80%;
+            margin: 0 auto;
+            margin-top: 15px;
+            a {
+                display: block;
+            }
+        }
+        &__subtitle {
+            margin-top: 10px;
+            min-height: 55px;
+            line-height: 25px;
+        }
+        &__descr {
+            margin-top: 0px;
+        }
+    }
+}
