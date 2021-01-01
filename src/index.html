@@ -91,7 +91,7 @@
                 Просто заполните форму заявки<br>
                 и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="feed-form" action="#">
+            <form id="consultation-form" class="feed-form" action="#">
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="tel" name="phone" placeholder="Ваш телефон" required>
                 <input type="email" name="email" placeholder="Ваш E-mail" required>
@@ -420,9 +420,9 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                <input type="email" name="email" placeholder="Ваш E-mail" required>
+                <input type="text" name="name" placeholder="Ваше имя">
+                <input type="tel" name="phone" placeholder="Ваш телефон">
+                <input type="email" name="email" placeholder="Ваш E-mail">
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -432,9 +432,9 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                <input type="email" name="email" placeholder="Ваш E-mail" required>
+                <input type="text" name="name" placeholder="Ваше имя">
+                <input type="tel" name="phone" placeholder="Ваш телефон">
+                <input type="email" name="email" placeholder="Ваш E-mail">
                 <button class="button button_submit">Купить</button>
             </form>
         </div>
@@ -448,7 +448,9 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
