@@ -126,7 +126,7 @@
                 margin-right: 20px;
             }
         }
-        &__list {
+        &__wrapper2 {
             width: 50%;
             margin-left: 0px;
             transform: translateX(0%);
@@ -134,12 +134,14 @@
             transition: 0.5s all;
             padding-left: 19px;
             margin-bottom: 0;
-            list-style-type: none;
             position: relative;
             &_active {
                 transform: translateX(-100%);
-                margin-left: 20px;
             }
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 0;
             li {
                 font-size: 14px;
                 font-weight: 300;

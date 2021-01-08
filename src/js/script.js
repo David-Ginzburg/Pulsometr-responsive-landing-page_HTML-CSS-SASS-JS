@@ -1,5 +1,7 @@
 $(document).ready(function(){
+
   // Carousel
+
   $('.carousel__inner').slick({
       speed: 1200,
       prevArrow: '<button type="button" class="slick-prev"><img src="icons/slider/chevron-left-solid.svg"></button>',
@@ -20,7 +22,7 @@ $(document).ready(function(){
           $(this).on('click', function(e) {
               e.preventDefault();
               $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-              $('.catalog-item__list').eq(i).toggleClass(' catalog-item__list_active');
+              $('.catalog-item__wrapper2').eq(i).toggleClass('catalog-item__wrapper2_active');
           })
       });
     };
@@ -80,6 +82,8 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
 
+    // Mailsend
+
     jQuery(function($){
       $('input[name=phone]').mask("9 (999) 999-99-99");
    });
@@ -98,4 +102,26 @@ $(document).ready(function(){
      });
      return false;
    });
+
+   // Smoothe scroll and page up
+
+   $(window).scroll(function() {
+     if ($(this).scrollTop() > 1600) {
+       $('.pageup').fadeIn();
+     } else {
+      $('.pageup').fadeOut();
+     }
+   });
+
+   $(function(){
+    $("a[href=#up]").click(function(){
+            const _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+            return false;
+    });
   });
+
+  // Wow js animation
+
+  new WOW().init();
+});
