@@ -47,7 +47,7 @@ $(document).ready(function(){
       $('.overlay, #consultation, #order, #thanks').fadeOut('fast');
     })
 
-  // Validation
+  // Validation and send form
 
     function validateForms(form) {
       $(form).validate({
@@ -74,6 +74,17 @@ $(document).ready(function(){
           phone: {
             required: "Введите ваш мобильный телефон"
           }
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "php/formBitrixHook.php",
+            data: $(form).serialize()
+          }).done(function() {
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn();
+            $(form).trigger('reset');
+          });
         }
       });
     }
@@ -82,26 +93,9 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
 
-    // Mailsend
-
     jQuery(function($){
       $('input[name=phone]').mask("9 (999) 999-99-99");
-   });
-
-   $('form').submit(function(e) {
-     e.preventDefault();
-     $.ajax({
-       type: "POST",
-       url: "php/formBitrixHook.php",
-       data: $(this).serialize()
-     }).done(function() {
-       $(this).find('input').val('');
-       $('#consultation, #order').fadeOut();
-       $('.overlay, #thanks').fadeIn();
-       $('form').trigger('reset');
-     });
-     return false;
-   });
+    });
 
    // Smoothe scroll and page up
 
